@@ -7,8 +7,8 @@ resource "aws_vpc" "main" {
 }
 
 resource "aws_subnet" "main" {
-  vpc_id            = aws_vpc.main.id
-  cidr_block        = "10.0.1.0/24"
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = "10.0.1.0/24"
   map_public_ip_on_launch = true
 
   tags = {
@@ -17,9 +17,9 @@ resource "aws_subnet" "main" {
 }
 
 resource "aws_instance" "ejemplo" {
-  ami           = "ami-0156001f0548e90b1" # Updated to a valid Amazon Linux 2 AMI for us-east-1
-  instance_type = "t3.micro"              # Changed to t3.micro (often Free Tier eligible depending on account)
-  subnet_id     = aws_subnet.main.id # Associate instance with the created Subnet
+  instance_type = "t3.micro"              # Free Tier eligible instance type
+  subnet_id     = aws_subnet.main.id      # Associate instance with the created Subnet
+  ami           = var.ami-linux
 
   tags = {
     Name = "EjemploInstancia"
