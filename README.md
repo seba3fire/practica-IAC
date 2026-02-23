@@ -1,4 +1,4 @@
-# Práctica IaC — Terraform + AWS
+# Portafolio Terraform AWS — Infraestructura como Código
 
 Proyecto de **Infraestructura como Código (IaC)** usando **Terraform** sobre **AWS**, desarrollado como parte de mi portafolio profesional. Demuestra el aprovisionamiento automatizado de una arquitectura de red completa con una instancia web.
 

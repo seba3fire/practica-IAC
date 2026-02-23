@@ -11,7 +11,7 @@ variable "region" {
 variable "nombre_proyecto" {
   description = "Nombre del proyecto, usado en los tags de los recursos"
   type        = string
-  default     = "practica-iac"
+  default     = "portafolio-terraform-aws"
 }
 
 variable "entorno" {
